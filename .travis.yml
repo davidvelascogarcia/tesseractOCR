@@ -32,6 +32,7 @@ before_install:
 
 # Configurar Git si no lo está
 
+
   - if [ ! `git config --get user.email` ]; then `git config --global user.email 'user@example.com'`; fi
   - if [ ! `git config --get user.name` ]; then `git config --global user.name 'Travis CI'`; fi
 
@@ -58,14 +59,13 @@ install:
 # Tareas a ejecutar antes de nuestra prueba
 
 before_script:
-
-  - cd .. 
   - wget http://www.leptonica.com/source/leptonica-1.74.4.tar.gz
   - tar xvf leptonica-1.74.tar.gz
   - cd leptonica-1.74
   - ./configure
   - make
   - sudo make install
+  - cd ..
   - cd programs
   - cd linux
   - mkdir build
