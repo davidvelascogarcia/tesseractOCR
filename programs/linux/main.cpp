@@ -24,7 +24,7 @@ int main()
 
     // Open image with leptonica library
     cout<<"Loading picture to process.."<<endl;
-    Pix *image = pixRead("/home/tiagoentrenamiento/Imágenes/prueba.png");
+    Pix *image = pixRead("./../images/prueba.png");
     api->SetImage(image);
     // Get OCR result
     cout<<"Processing picture..."<<endl;

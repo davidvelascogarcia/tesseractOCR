@@ -1,0 +1,83 @@
+# Integración continua Travis CI
+
+# Lenguaje de programación
+
+language: cpp
+
+# Sistema operativo destino a probar
+
+os: linux
+
+# Distribución del sistema operativo
+
+dist: trusty
+
+# Requerimiento de permisos en Linux
+
+sudo: enabled
+
+# Compiladores a emplear
+
+compiler: 
+#  - gcc
+   - clang
+
+# Tareas a realizar antes de instalacción
+
+before_install:
+
+# Actualizar
+
+  - sudo apt-get -qq update
+
+# Configurar Git si no lo está
+
+  - if [ ! `git config --get user.email` ]; then `git config --global user.email 'user@example.com'`; fi
+  - if [ ! `git config --get user.name` ]; then `git config --global user.name 'Travis CI'`; fi
+
+# En caso de requerir instalar algo para la prueba
+
+install:
+
+# Instalar dependencias
+
+  - sudo apt-get install g++ # or clang++ (presumably)
+  - sudo apt-get install autoconf automake libtool
+  - sudo apt-get install pkg-config
+  - sudo apt-get install libpng-dev
+  - sudo apt-get install libjpeg8-dev
+  - sudo apt-get install libtiff5-dev
+  - sudo apt-get install zlib1g-dev
+
+
+# Instalar tesseract
+
+  - sudo apt install tesseract-ocr
+  - sudo apt install libtesseract-dev
+  - sudo apt libleptonica-dev
+
+# Tareas a ejecutar antes de nuestra prueba
+
+before_script:
+  - cd programs
+  - cd linux
+  - mkdir build
+  - cd build
+  - cmake ..
+
+# Compilamos
+
+script:
+  - make
+
+# En caso de compilación exitosa
+
+after_success:
+  - sudo make install
+#  - ./ocr
+  - sudo make uninstall
+
+# Notificaciones por correo
+
+notifications:
+email: true
