@@ -1,5 +1,5 @@
 # Install tesseract-ocr
-
+[![Build Status](https://travis-ci.org/davidvelascogarcia/tesseractOCR.svg?branch=master)](https://travis-ci.org/davidvelascogarcia/tesseractOCR)
 We use tesseract-ocr for Tesseract C++ API. Official page: [link](https://github.com/tesseract-ocr/tesseract)
 
 - [Install dependencies (Ubuntu)](#install-dependencies-ubuntu)
