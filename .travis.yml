@@ -56,9 +56,20 @@ install:
   - sudo apt install libtesseract-dev
 #  - sudo apt libleptonica-dev
 
+
+- wget http://www.leptonica.com/source/leptonica-1.74.4.tar.gz
+- tar xvf leptonica-1.74.tar.gz
+- cd leptonica-1.74
+- ./configure
+- make
+- sudo make install
+
+
+
 # Tareas a ejecutar antes de nuestra prueba
 
 before_script:
+  - cd ..
   - cd programs
   - cd linux
   - mkdir build
