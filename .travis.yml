@@ -54,7 +54,7 @@ install:
 
   - sudo apt install tesseract-ocr
   - sudo apt install libtesseract-dev
-  - sudo apt libleptonica-dev
+#  - sudo apt libleptonica-dev
 
 # Tareas a ejecutar antes de nuestra prueba
 
