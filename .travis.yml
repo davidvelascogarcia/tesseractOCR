@@ -59,7 +59,8 @@ install:
 
 before_script:
 
-  - cd ..  - wget http://www.leptonica.com/source/leptonica-1.74.4.tar.gz
+  - cd .. 
+  - wget http://www.leptonica.com/source/leptonica-1.74.4.tar.gz
   - tar xvf leptonica-1.74.tar.gz
   - cd leptonica-1.74
   - ./configure
