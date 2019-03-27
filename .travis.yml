@@ -56,6 +56,12 @@ install:
   - sudo apt install tesseract-ocr
   - sudo apt install libtesseract-dev
 #  - sudo apt libleptonica-dev
+
+
+# Instalar OpenCV
+
+  - sudo apt-get install libopencv-dev
+
 # Tareas a ejecutar antes de nuestra prueba
 
 before_script:
