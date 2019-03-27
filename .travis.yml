@@ -81,7 +81,7 @@ script:
 
 after_success:
   - sudo make install
-#  - ./ocr
+  - ./ocr
   - sudo make uninstall
 
 # Notificaciones por correo
