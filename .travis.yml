@@ -55,7 +55,7 @@ install:
 
   - sudo apt install tesseract-ocr
   - sudo apt install libtesseract-dev
-#  - sudo apt libleptonica-dev
+  - sudo apt install libleptonica-dev
 
 
 # Instalar OpenCV
@@ -65,13 +65,7 @@ install:
 # Tareas a ejecutar antes de nuestra prueba
 
 before_script:
-  - wget http://www.leptonica.com/source/leptonica-1.74.4.tar.gz
-  - tar xvf leptonica-1.74.4.tar.gz
-  - cd leptonica-1.74.4
-  - ./configure
-  - make
-  - sudo make install
-  - cd ..
+
   - cd programs
   - cd linux
   - mkdir build
