@@ -1,33 +1,26 @@
-# Install tesseract-ocr
-[![Build Status](https://travis-ci.org/davidvelascogarcia/tesseractOCR.svg?branch=master)](https://travis-ci.org/davidvelascogarcia/tesseractOCR)
-We use tesseract-ocr for Tesseract C++ API. Official page: [link](https://github.com/tesseract-ocr/tesseract)
+# Tesseract: OCR (C++ API)
 
-- [Install dependencies (Ubuntu)](#install-dependencies-ubuntu)
-- [Install tesseract (Ubuntu)](#install-tesseract-ubuntu)
+[![Build Status](https://travis-ci.org/davidvelascogarcia//tesseractOCR.svg?branch=master)](https://travis-ci.org/davidvelascogarcia//tesseractOCR)
 
+- [Introducción](#introducción)
+- [Listado de programas](#listado-de-programas)
+- [Documentación](#documentación)
+- [Enlaces de interés](#enlaces-de-interés)
 
-## Install dependencies (Ubuntu)
+## Introducción
 
-Download and install requirements.
+`tesseractOCR`, implementación de detector con reconocimiento óptico de caracteres vía `tesseracr` con recepción de fuentes de imagen vía `YARP`.
 
-```bash
-sudo apt-get install g++ # or clang++ (presumably)
-sudo apt-get install autoconf automake libtool
-sudo apt-get install pkg-config
-sudo apt-get install libpng-dev
-sudo apt-get install libjpeg8-dev
-sudo apt-get install libtiff5-dev
-sudo apt-get install zlib1g-dev
-```
+## Listado de programas
 
-## Install Tesseract (Ubuntu)
+Se adjuntan el listado de programas desarrollados en la carpeta [programs](./programs).
 
-Download and install:
+## Documentación
 
-```bash
-sudo apt install tesseract-ocr
-sudo apt install libtesseract-dev
-sudo apt libleptonica-dev
-```
+Se adjunta documentación relevante en la carpeta [docs](./docs).
+Adjunta guía de instalación de [tesseract-ocr](./docs/README.md).
 
+## Enlaces de interés
+
+* [Tesseract: C++ API](https://github.com/tesseract-ocr/)
 

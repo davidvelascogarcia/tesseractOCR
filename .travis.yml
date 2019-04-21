@@ -74,6 +74,7 @@ before_script:
 
   - cd programs
   - cd linux
+  - cd tesseractOCR
   - mkdir build
   - cd build
   - cmake ..
@@ -87,7 +88,6 @@ script:
 
 after_success:
   - sudo make install
-#  - ./ocr
   - sudo make uninstall
 
 # Notificaciones por correo

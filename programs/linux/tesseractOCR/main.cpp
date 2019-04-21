@@ -61,7 +61,7 @@ int main()
   Network yarp;
   cout<<"Iniciando red de YARP"<<endl;
   BufferedPort<ImageOf<PixelRgb> > port;
-  port.open("/receptor_video");
+  port.open("/tesseractOCR/img:i");
   cout<<"Esperando fuentes de imagen..."<<endl;
 
 

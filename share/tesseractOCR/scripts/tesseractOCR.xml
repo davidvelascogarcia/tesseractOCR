@@ -1,0 +1,24 @@
+<application>
+<name>tesseractOCR App</name>
+        <module>
+                <name>yarpdev</name>
+                <parameters>--device opencv_grabber --name /grabber/img:i --camera 0</parameters>
+                <node>localhost</node>
+        </module>
+
+        <module>
+                <name>yarpview</name>
+                <parameters>--name /yarpview/grabber/img:i</parameters>
+                <node>localhost</node>
+        </module>
+        <connection>
+                <from>/grabber/img:i</from>
+                <to>/yarpview/grabber/img:i</to>
+        </connection>
+
+        <module>
+                <name>tesseractOCR</name>
+                <workdir>./../programs/linux/tesseractOCR/build</workdir>
+                <node>localhost</node>
+        </module>
+</application>
